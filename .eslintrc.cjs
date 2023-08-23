@@ -21,5 +21,33 @@ module.exports = {
   ],
   parserOptions: {
     ecmaVersion: 'latest'
-  }
+  },
+  rules: {
+    'no-console': 2,
+    'no-debugger': 2,
+    'vue/component-tags-order': ['error', { order: ['template', 'script', 'style'] }],
+    'max-params': [0, 5],
+    'no-undef': 0,
+    '@typescript-eslint/no-require-imports': 0,
+    'vue/max-attributes-per-line': 0,
+    'vue/html-self-closing': [
+      'error',
+      {
+        html: {
+          void: 'always',
+          normal: 'never',
+          component: 'always',
+        },
+        svg: 'always',
+        math: 'always',
+      },
+    ],
+    'vue/no-duplicate-attributes': [
+      'error',
+      {
+        allowCoexistClass: true,
+        allowCoexistStyle: true,
+      },
+    ],
+  },
 }
