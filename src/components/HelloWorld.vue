@@ -1,13 +1,13 @@
 <template>
-  <div class="greetings">
-    <h1 class="green">{{ msg }}</h1>
+  <div class='greetings'>
+    <h1 class='green'>{{ msg }}</h1>
     <h3>
-      You’ve  dd successfully created a project with
+      You’ve dd successfully created a project with
     </h3>
   </div>
 </template>
 
-<script setup lang="ts">
+<script setup lang='ts'>
 defineProps<{
   msg: string
 }>()

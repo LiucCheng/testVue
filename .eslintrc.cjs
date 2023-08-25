@@ -29,6 +29,8 @@ module.exports = {
     'max-params': [0, 5],
     'no-undef': 0,
     '@typescript-eslint/no-require-imports': 0,
+    // 最新的规则校验要求不建议使用index或者单各单词，防止与母版index冲突，虽然我并未遇到这样的问题，
+    'vue/multi-word-component-names': 'off',
     'vue/max-attributes-per-line': 0,
     'vue/html-self-closing': [
       'error',
@@ -42,6 +44,19 @@ module.exports = {
         math: 'always',
       },
     ],
+    // 禁止在 return、throw、continue 和 break 语句之后出现不可达代码
+    'no-unreachable': 2,
+    // 2位缩进
+    'indent': [2, 2, {
+      'SwitchCase': 1
+    }],
+    // 强制使用一致的反勾号、双引号或单引号
+    'quotes': [2, 'single', {
+      'avoidEscape': true,
+      'allowTemplateLiterals': true
+    }],
+    // err的错误回调必须处理
+    'handle-callback-err': [2, '^(err|error)$'],
     'vue/no-duplicate-attributes': [
       'error',
       {
