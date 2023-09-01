@@ -46,6 +46,13 @@ module.exports = {
     ],
     // 禁止在 return、throw、continue 和 break 语句之后出现不可达代码
     'no-unreachable': 2,
+    'comma-dangle': [2, {
+      "arrays": "never",
+      "objects": "always",
+      "imports": "never",
+      "exports": "never",
+      "functions": "never"
+    }],
     // 2位缩进
     'indent': [2, 2, {
       'SwitchCase': 1
